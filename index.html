@@ -10,13 +10,28 @@
 </head>
 
 <body>
-    <h1>Hellow world</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis aspernatur suscipit a nesciunt officiis fuga cumque dolore quod earum neque?</p>
     <div class="container">
-        <div class="box">
-
-        </div>
+        <form action="">
+            <label for="fname">First Name</label> </br>
+            <input type="text" id="fname" placeholder="First Name"></br>
+            <label for="fname">Last Name</label></br>
+            <input type="text" id="lname" placeholder="Last Name"></br>
+            </br>
+            <button id="btn">Take Away</button>
+            <h1 class="heading"></h1>
+        </form>
     </div>
+
+    <script>
+        const fname = document.getElementById("fname");
+        const lname = document.getElementById("lname");
+        const fnLn = fname + lname;
+        const btn = document.getElementById("btn");
+        btn.addEventListener("click", function() {
+            document.querySelector(".heading").textContent = fnLn;
+        })
+    </script>
+
 </body>
 
 </html>
